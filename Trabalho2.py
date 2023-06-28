@@ -30,8 +30,6 @@ def roundRobin(nomes, tempos, chegadas, prioridades):
                 lista.insert(j,j)
                 procChegou[j] = True
 
-        lista.sort()        
-
         if(executando == 99 and len(lista) != 0):
             executando = lista.pop(0)
 
@@ -74,8 +72,8 @@ def roundRobin(nomes, tempos, chegadas, prioridades):
 
         ttResp = tempoResposta[i] + ttResp
 
-    print("\nTempo médio de espera = ", ttEsp/len(tempos))
-    print("\nTempo médio de resposta = ", ttResp/len(tempos))
+    print("\nTempo médio de espera = ", round(ttEsp/len(tempos), 2))
+    print("\nTempo médio de resposta = ", round(ttResp/len(tempos),2))
             
 
 
